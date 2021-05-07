@@ -1,0 +1,43 @@
+\hypertarget{fonction__principale_8cpp}{}\doxysection{fonction\+\_\+principale.\+cpp File Reference}
+\label{fonction__principale_8cpp}\index{fonction\_principale.cpp@{fonction\_principale.cpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}polynome.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}produits\+\_\+scalaires.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ polynome$<$ double $>$ $>$ \mbox{\hyperlink{fonction__principale_8cpp_a8c865aad59e38392e47bc98191b6e00e}{construire\+\_\+base\+\_\+ortho\+\_\+polynomiale}} (int dim, const produit\+\_\+scalaire\+\_\+base \&dot)
+\begin{DoxyCompactList}\small\item\em Construit une base orthonormale de polynôme en utilisant un produit-\/scalaire fourni par produit\+\_\+scalaire\+\_\+base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fonction__principale_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{fonction__principale_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Programme principal calculant la base orthonormale de polynomes. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fonction__principale_8cpp_a8c865aad59e38392e47bc98191b6e00e}\label{fonction__principale_8cpp_a8c865aad59e38392e47bc98191b6e00e}} 
+\index{fonction\_principale.cpp@{fonction\_principale.cpp}!construire\_base\_ortho\_polynomiale@{construire\_base\_ortho\_polynomiale}}
+\index{construire\_base\_ortho\_polynomiale@{construire\_base\_ortho\_polynomiale}!fonction\_principale.cpp@{fonction\_principale.cpp}}
+\doxysubsubsection{\texorpdfstring{construire\_base\_ortho\_polynomiale()}{construire\_base\_ortho\_polynomiale()}}
+{\footnotesize\ttfamily std\+::vector$<$polynome$<$double$>$ $>$ construire\+\_\+base\+\_\+ortho\+\_\+polynomiale (\begin{DoxyParamCaption}\item[{int}]{dim,  }\item[{const produit\+\_\+scalaire\+\_\+base \&}]{dot }\end{DoxyParamCaption})}
+
+
+
+Construit une base orthonormale de polynôme en utilisant un produit-\/scalaire fourni par produit\+\_\+scalaire\+\_\+base. 
+
+produit\+\_\+scalaire\+\_\+base est une classe abstraite qui permet de définir un opérateur () définissant produit-\/scalaire particulier (intégrale avec poids ou non).
+
+
+\begin{DoxyParams}{Parameters}
+{\em dim} & Le nombre de vecteurs orthonormaux à construire \\
+\hline
+{\em dot} & Le produit scalaire choisi \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un ensemble de polynômes orthonormaux pour le produit scalaire passé en argument. 
+\end{DoxyReturn}

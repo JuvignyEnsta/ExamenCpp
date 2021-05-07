@@ -1,0 +1,66 @@
+\hypertarget{integration_8hpp}{}\doxysection{integration.\+hpp File Reference}
+\label{integration_8hpp}\index{integration.hpp@{integration.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F $>$ }\\double \mbox{\hyperlink{integration_8hpp_a51572fe7a1df0c9b073780c3ada54d23}{quadrature}} (const double \&a, const double \&b, const F \&func, int deg)
+\begin{DoxyCompactList}\small\item\em Formules de quadrature de Gauss-\/\+Legendre (pas forcément idéal pour certains produits-\/scalaires)... \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F $>$ }\\double \mbox{\hyperlink{integration_8hpp_aa20b1b34c6e083c06d10b42b056cd7c1}{integration}} (const double \&a, const double \&b, const F \&func, int deg)
+\begin{DoxyCompactList}\small\item\em Calcul de l\textquotesingle{}intégrale de la fonction func entre les bornes a et b. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Schéma d\textquotesingle{}intégration pour l\textquotesingle{}examen (pas forcément adapté à certaines intégrales) 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{integration_8hpp_aa20b1b34c6e083c06d10b42b056cd7c1}\label{integration_8hpp_aa20b1b34c6e083c06d10b42b056cd7c1}} 
+\index{integration.hpp@{integration.hpp}!integration@{integration}}
+\index{integration@{integration}!integration.hpp@{integration.hpp}}
+\doxysubsubsection{\texorpdfstring{integration()}{integration()}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+double integration (\begin{DoxyParamCaption}\item[{const double \&}]{a,  }\item[{const double \&}]{b,  }\item[{const F \&}]{func,  }\item[{int}]{deg }\end{DoxyParamCaption})}
+
+
+
+Calcul de l\textquotesingle{}intégrale de la fonction func entre les bornes a et b. 
+
+Calcul de l\textquotesingle{}intégrale de la fonction func entre les bornes a et b en subdivisant l\textquotesingle{}intervalle \mbox{[}a,b\mbox{]} en sous-\/intervalles
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & La borne inférieure de l\textquotesingle{}intégrale \\
+\hline
+{\em b} & La borne supérieure de l\textquotesingle{}intégrale \\
+\hline
+{\em func} & La fonction à intégrer \\
+\hline
+{\em deg} & L\textquotesingle{}ordre de quadrature pour intégrer sur chaque sous-\/intervalle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{integration_8hpp_a51572fe7a1df0c9b073780c3ada54d23}\label{integration_8hpp_a51572fe7a1df0c9b073780c3ada54d23}} 
+\index{integration.hpp@{integration.hpp}!quadrature@{quadrature}}
+\index{quadrature@{quadrature}!integration.hpp@{integration.hpp}}
+\doxysubsubsection{\texorpdfstring{quadrature()}{quadrature()}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+double quadrature (\begin{DoxyParamCaption}\item[{const double \&}]{a,  }\item[{const double \&}]{b,  }\item[{const F \&}]{func,  }\item[{int}]{deg }\end{DoxyParamCaption})}
+
+
+
+Formules de quadrature de Gauss-\/\+Legendre (pas forcément idéal pour certains produits-\/scalaires)... 
+
+Calcul l\textquotesingle{}intégrale entre a et b de la fonction func avec un degré de précision deg à l\textquotesingle{}aide de la formule de quadrature de Gauss-\/\+Legendre
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & La borne inférieure de l\textquotesingle{}intégrale \\
+\hline
+{\em b} & La borne supérieure de l\textquotesingle{}intégrale \\
+\hline
+{\em func} & La fonction à intégrer \\
+\hline
+{\em deg} & L\textquotesingle{}ordre d\textquotesingle{}intégration de la quadrature \\
+\hline
+\end{DoxyParams}
